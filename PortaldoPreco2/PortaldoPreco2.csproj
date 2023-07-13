@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFD20CE6-BFE1-41B8-99F4-6274C59A99E0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PortaldoPreco2</RootNamespace>
+    <AssemblyName>PortaldoPreco2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formularios\CustomComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\Customtxt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\Customtxt.Designer.cs">
+      <DependentUpon>Customtxt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_Alert.designer.cs">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCadastros.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCadastros.Designer.cs">
+      <DependentUpon>frmCadastros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmDataBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmDataBase.Designer.cs">
+      <DependentUpon>frmDataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmEditar.Designer.cs">
+      <DependentUpon>frmEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmOverview.Designer.cs">
+      <DependentUpon>frmOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmProdutos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmProdutos.Designer.cs">
+      <DependentUpon>frmProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSobre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSobre.Designer.cs">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="txtcadastro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="txtcadastro.Designer.cs">
+      <DependentUpon>txtcadastro.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Formularios\Customtxt.resx">
+      <DependentUpon>Customtxt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_Alert.resx">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCadastros.resx">
+      <DependentUpon>frmCadastros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmDataBase.resx">
+      <DependentUpon>frmDataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmEditar.resx">
+      <DependentUpon>frmEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmOverview.resx">
+      <DependentUpon>frmOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmProdutos.resx">
+      <DependentUpon>frmProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSobre.resx">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="txtcadastro.resx">
+      <DependentUpon>txtcadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portal do preço %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail-Icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Não tem uma conta_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Esqueceu a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lembrar de mim..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lembrar de mim. %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SIGN IN - TEXTO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 34 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 34 %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Topo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Store logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Store logo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ant-design_info-circle-outlined.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rodapé.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Título.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Título %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Título %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Título %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Store logo %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deslogarbranco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadastrobranco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cubobranco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casacinzapqn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cubocinzapqn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadastrocinzapqn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadastrobrancopqn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cubobrancopqn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casabrancapqn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sobrebrancopqn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sobrecinzapqn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 47.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noto-v1_magnifying-glass-tilted-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\direitosportal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logosobre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portaldoprecocpr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sobre Nós..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portaldoprecotexto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bem vindo,.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 34 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 34 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\campos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_45px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cancel_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\errornovo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 34 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 46.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %2812%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
